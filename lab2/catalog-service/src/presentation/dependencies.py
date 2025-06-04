@@ -5,13 +5,12 @@ from typing import Optional
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from ..infrastructure.memory_repositories import InMemoryServiceRepository, InMemoryCategoryRepository
+from ..infrastructure.memory_repositories import InMemoryServiceRepository
 from ..infrastructure.auth import JWTService, JWTConfig, AuthenticatedUser, UserRole
 from ..use_cases.catalog_use_cases import CatalogService
 
 # Singleton repositories
 _service_repository = InMemoryServiceRepository()
-_category_repository = InMemoryCategoryRepository()
 
 # Singleton JWT service
 _jwt_config = JWTConfig()
@@ -21,7 +20,7 @@ _jwt_service = JWTService(_jwt_config)
 security = HTTPBearer()
 
 def get_catalog_service() -> CatalogService:
-    return CatalogService(_service_repository, _category_repository)
+    return CatalogService(_service_repository)
 
 def get_jwt_service() -> JWTService:
     """Получить экземпляр JWTService"""
@@ -74,5 +73,4 @@ async def get_admin_user(
 def get_catalog_service_cached() -> CatalogService:
     """Получить экземпляр сервиса каталога (кэшированный)"""
     service_repo = InMemoryServiceRepository()
-    category_repo = InMemoryCategoryRepository()
-    return CatalogService(service_repo, category_repo) 
+    return CatalogService(service_repo) 

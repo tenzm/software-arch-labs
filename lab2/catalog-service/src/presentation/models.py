@@ -1,7 +1,7 @@
 from typing import Optional, List
 from datetime import datetime
 from pydantic import BaseModel, Field
-from ..domain.entities import Service, Category, ServiceStatus
+from ..domain.entities import Service, ServiceStatus
 
 
 class ServiceResponse(BaseModel):
@@ -75,44 +75,24 @@ class ServiceUpdateRequest(BaseModel):
     status: Optional[ServiceStatus] = None
     tags: Optional[List[str]] = None
 
-
-class CategoryResponse(BaseModel):
-    """Модель ответа для категории"""
-    id: str
-    name: str
-    description: str
-    parent_id: Optional[str] = None
-    is_active: bool = True
-    created_at: datetime
-    
-    @classmethod
-    def from_domain(cls, category: Category) -> 'CategoryResponse':
-        """Создать DTO из доменной модели"""
-        return cls(
-            id=category.id,
-            name=category.name,
-            description=category.description,
-            parent_id=category.parent_id,
-            is_active=category.is_active,
-            created_at=category.created_at
-        )
-
-
-class CategoryCreateRequest(BaseModel):
-    """Модель запроса для создания категории"""
-    name: str = Field(..., min_length=1, max_length=100)
-    description: str = Field(..., min_length=1, max_length=500)
-    parent_id: Optional[str] = None
-    is_active: bool = True
-    
-    def to_domain(self) -> Category:
-        """Конвертировать в доменную модель"""
-        return Category(
-            name=self.name,
-            description=self.description,
-            parent_id=self.parent_id,
-            is_active=self.is_active
-        )
+    def apply_to_domain(self, service: Service):
+        """Применить изменения к доменной модели"""
+        if self.title is not None:
+            service.title = self.title
+        if self.description is not None:
+            service.description = self.description
+        if self.category is not None:
+            service.category = self.category
+        if self.price_from is not None:
+            service.price_from = self.price_from
+        if self.price_to is not None:
+            service.price_to = self.price_to
+        if self.currency is not None:
+            service.currency = self.currency
+        if self.status is not None:
+            service.status = self.status
+        if self.tags is not None:
+            service.tags = self.tags
 
 
 class ServicesListResponse(BaseModel):
@@ -129,15 +109,6 @@ class ServicesListResponse(BaseModel):
         )
 
 
-class CategoriesListResponse(BaseModel):
-    """Модель ответа для списка категорий"""
-    categories: List[CategoryResponse]
-    total: int
-    
-    @classmethod 
-    def from_categories(cls, categories: List[Category]) -> 'CategoriesListResponse':
-        """Создать DTO из списка доменных моделей"""
-        return cls(
-            categories=[CategoryResponse.from_domain(category) for category in categories],
-            total=len(categories)
-        ) 
+class MessageResponse(BaseModel):
+    """Модель ответа с сообщением"""
+    message: str 
