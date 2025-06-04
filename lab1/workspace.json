@@ -1,0 +1,1120 @@
+{
+  "configuration" : { },
+  "description" : "Описание архитектуры платформы поиска и заказа услуг в стиле Architecture as Code",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-06-04T18:11:00Z",
+  "model" : {
+    "deploymentNodes" : [ {
+      "children" : [ {
+        "containerInstances" : [ {
+          "containerId" : "4",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Production",
+          "id" : "30",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "production.a898b42f-bf70-4514-baec-6fc679d5d86b.b0a19726-ed88-4696-aabd-f33c27edf860.a3bac2bd-0ef5-4043-bb3a-5084635fa228"
+          },
+          "relationships" : [ {
+            "description" : "Работа с пользователями",
+            "destinationId" : "34",
+            "id" : "35",
+            "linkedRelationshipId" : "17",
+            "sourceId" : "30"
+          }, {
+            "description" : "Работа с услугами",
+            "destinationId" : "38",
+            "id" : "39",
+            "linkedRelationshipId" : "20",
+            "sourceId" : "30"
+          }, {
+            "description" : "Работа с заказами",
+            "destinationId" : "42",
+            "id" : "43",
+            "linkedRelationshipId" : "23",
+            "sourceId" : "30"
+          } ],
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "29",
+        "instances" : "1",
+        "name" : "Userplane BFF Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.a898b42f-bf70-4514-baec-6fc679d5d86b.b0a19726-ed88-4696-aabd-f33c27edf860"
+        },
+        "tags" : "Element,Deployment Node"
+      }, {
+        "containerInstances" : [ {
+          "containerId" : "5",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Production",
+          "id" : "32",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "production.a898b42f-bf70-4514-baec-6fc679d5d86b.ec1a8bfb-8040-43c8-8c24-d6e41889a3d3.db0bb664-3c65-403b-b00e-e035db2ee769"
+          },
+          "relationships" : [ {
+            "description" : "Работа с пользователями",
+            "destinationId" : "34",
+            "id" : "36",
+            "linkedRelationshipId" : "18",
+            "sourceId" : "32"
+          }, {
+            "description" : "Работа с услугами",
+            "destinationId" : "38",
+            "id" : "40",
+            "linkedRelationshipId" : "21",
+            "sourceId" : "32"
+          }, {
+            "description" : "Просмотр заказов пользователей",
+            "destinationId" : "42",
+            "id" : "44",
+            "linkedRelationshipId" : "24",
+            "sourceId" : "32"
+          } ],
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "31",
+        "instances" : "1",
+        "name" : "Admin BFF Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.a898b42f-bf70-4514-baec-6fc679d5d86b.ec1a8bfb-8040-43c8-8c24-d6e41889a3d3"
+        },
+        "tags" : "Element,Deployment Node"
+      } ],
+      "environment" : "Production",
+      "id" : "28",
+      "instances" : "1",
+      "name" : "BFF Layer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "production.a898b42f-bf70-4514-baec-6fc679d5d86b"
+      },
+      "tags" : "Element,Deployment Node"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "6",
+        "deploymentGroups" : [ "Default" ],
+        "environment" : "Production",
+        "id" : "34",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.c396e733-8fc8-46bc-8021-e9eb16fe0bfa.568d5d77-e63f-477a-8f20-90b3a051fedf"
+        },
+        "relationships" : [ {
+          "description" : "Чтение/запись данных о пользователях",
+          "destinationId" : "49",
+          "id" : "50",
+          "linkedRelationshipId" : "19",
+          "sourceId" : "34"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "environment" : "Production",
+      "id" : "33",
+      "instances" : "1",
+      "name" : "User Service Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "production.c396e733-8fc8-46bc-8021-e9eb16fe0bfa"
+      },
+      "tags" : "Element,Deployment Node"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "7",
+        "deploymentGroups" : [ "Default" ],
+        "environment" : "Production",
+        "id" : "38",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.76cde434-9823-48d0-b3b0-6fe5fb2155ed.524645fd-8312-406e-8f97-00fa6b88e4bf"
+        },
+        "relationships" : [ {
+          "description" : "Чтение/запись услуг",
+          "destinationId" : "52",
+          "id" : "53",
+          "linkedRelationshipId" : "22",
+          "sourceId" : "38"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "environment" : "Production",
+      "id" : "37",
+      "instances" : "1",
+      "name" : "Catalog Service Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "production.76cde434-9823-48d0-b3b0-6fe5fb2155ed"
+      },
+      "tags" : "Element,Deployment Node"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "8",
+        "deploymentGroups" : [ "Default" ],
+        "environment" : "Production",
+        "id" : "42",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.8d7af644-010e-47f9-a3bf-0dbd2ef48609.e3c4b121-a688-4ccb-8d5d-036be3894176"
+        },
+        "relationships" : [ {
+          "description" : "Проверка пользователя",
+          "destinationId" : "34",
+          "id" : "45",
+          "linkedRelationshipId" : "26",
+          "sourceId" : "42"
+        }, {
+          "description" : "Проверка услуги при добавлении в заказ",
+          "destinationId" : "38",
+          "id" : "46",
+          "linkedRelationshipId" : "27",
+          "sourceId" : "42"
+        }, {
+          "description" : "Чтение/запись заказов",
+          "destinationId" : "55",
+          "id" : "56",
+          "linkedRelationshipId" : "25",
+          "sourceId" : "42"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "environment" : "Production",
+      "id" : "41",
+      "instances" : "1",
+      "name" : "Order Service Node",
+      "properties" : {
+        "structurizr.dsl.identifier" : "production.8d7af644-010e-47f9-a3bf-0dbd2ef48609"
+      },
+      "tags" : "Element,Deployment Node"
+    }, {
+      "children" : [ {
+        "containerInstances" : [ {
+          "containerId" : "9",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Production",
+          "id" : "49",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.7b5dc544-5082-43b4-b109-77d6bbc274dd.fff6be1f-c8a2-4a68-a1e7-3eab5f6fa607"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "48",
+        "instances" : "1",
+        "name" : "User DB Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.7b5dc544-5082-43b4-b109-77d6bbc274dd"
+        },
+        "tags" : "Element,Deployment Node"
+      }, {
+        "containerInstances" : [ {
+          "containerId" : "10",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Production",
+          "id" : "52",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.a8ed51df-59b2-4fa0-8ed8-249c4c2895d6.8c812a20-2a55-4d4e-836e-0ea31a923548"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "51",
+        "instances" : "1",
+        "name" : "Catalog DB Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.a8ed51df-59b2-4fa0-8ed8-249c4c2895d6"
+        },
+        "tags" : "Element,Deployment Node"
+      }, {
+        "containerInstances" : [ {
+          "containerId" : "11",
+          "deploymentGroups" : [ "Default" ],
+          "environment" : "Production",
+          "id" : "55",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.17804cad-b9a1-440e-a5c2-dcb735022bfd.a12b5d31-b6d8-4a24-b61d-4c1e089b9235"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "54",
+        "instances" : "1",
+        "name" : "Order DB Node",
+        "properties" : {
+          "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d.17804cad-b9a1-440e-a5c2-dcb735022bfd"
+        },
+        "tags" : "Element,Deployment Node"
+      } ],
+      "environment" : "Production",
+      "id" : "47",
+      "instances" : "1",
+      "name" : "Databases",
+      "properties" : {
+        "structurizr.dsl.identifier" : "production.458ee3e3-b4a7-4971-a8f1-3889f22feb3d"
+      },
+      "tags" : "Element,Deployment Node"
+    } ],
+    "people" : [ {
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Пользователь",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "relationships" : [ {
+        "description" : "Доступ пользователя",
+        "destinationId" : "4",
+        "id" : "12",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Доступ пользователя",
+        "destinationId" : "3",
+        "id" : "13",
+        "linkedRelationshipId" : "12",
+        "sourceId" : "1"
+      }, {
+        "description" : "Взаимодействие через платформу",
+        "destinationId" : "3",
+        "id" : "16",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Администратор",
+      "properties" : {
+        "structurizr.dsl.identifier" : "admin"
+      },
+      "relationships" : [ {
+        "description" : "Доступ администратора",
+        "destinationId" : "5",
+        "id" : "14",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Доступ администратора",
+        "destinationId" : "3",
+        "id" : "15",
+        "linkedRelationshipId" : "14",
+        "sourceId" : "2"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "properties" : {
+      "structurizr.groupSeparator" : "/"
+    },
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "description" : "Промежуточный слой между клиентом (веб/мобайл) и сервисами для пользователей",
+        "documentation" : { },
+        "id" : "4",
+        "name" : "Userplane BFF",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.userplane_bff"
+        },
+        "relationships" : [ {
+          "description" : "Работа с пользователями",
+          "destinationId" : "6",
+          "id" : "17",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Работа с услугами",
+          "destinationId" : "7",
+          "id" : "20",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Работа с заказами",
+          "destinationId" : "8",
+          "id" : "23",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Промежуточный слой между админ-интерфейсом и сервисами",
+        "documentation" : { },
+        "id" : "5",
+        "name" : "Admin BFF",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.admin_bff"
+        },
+        "relationships" : [ {
+          "description" : "Работа с пользователями",
+          "destinationId" : "6",
+          "id" : "18",
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Работа с услугами",
+          "destinationId" : "7",
+          "id" : "21",
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Просмотр заказов пользователей",
+          "destinationId" : "8",
+          "id" : "24",
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Регистрация, поиск пользователей",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "User Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.user_service"
+        },
+        "relationships" : [ {
+          "description" : "Чтение/запись данных о пользователях",
+          "destinationId" : "9",
+          "id" : "19",
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Управление услугами",
+        "documentation" : { },
+        "id" : "7",
+        "name" : "Catalog Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.catalog_service"
+        },
+        "relationships" : [ {
+          "description" : "Чтение/запись услуг",
+          "destinationId" : "10",
+          "id" : "22",
+          "sourceId" : "7",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Создание и обработка заказов",
+        "documentation" : { },
+        "id" : "8",
+        "name" : "Order Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.order_service"
+        },
+        "relationships" : [ {
+          "description" : "Чтение/запись заказов",
+          "destinationId" : "11",
+          "id" : "25",
+          "sourceId" : "8",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Проверка пользователя",
+          "destinationId" : "6",
+          "id" : "26",
+          "sourceId" : "8",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Проверка услуги при добавлении в заказ",
+          "destinationId" : "7",
+          "id" : "27",
+          "sourceId" : "8",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "БД пользователей",
+        "documentation" : { },
+        "group" : "Слой данных",
+        "id" : "9",
+        "name" : "User DB",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.user_db"
+        },
+        "tags" : "Element,Container,database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "БД услуг",
+        "documentation" : { },
+        "group" : "Слой данных",
+        "id" : "10",
+        "name" : "Catalog DB",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.catalog_db"
+        },
+        "tags" : "Element,Container,database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "БД заказов",
+        "documentation" : { },
+        "group" : "Слой данных",
+        "id" : "11",
+        "name" : "Order DB",
+        "properties" : {
+          "structurizr.dsl.identifier" : "profi_platform.order_db"
+        },
+        "tags" : "Element,Container,database",
+        "technology" : "PostgreSQL"
+      } ],
+      "description" : "Сервис для поиска специалистов и заказа услуг",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Profi.ru",
+      "properties" : {
+        "structurizr.dsl.identifier" : "profi_platform"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Платформа услуг (Profi.ru)",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgIG5hbWUgItCf0LvQsNGC0YTQvtGA0LzQsCDRg9GB0LvRg9CzIChQcm9maS5ydSkiCiAgICBkZXNjcmlwdGlvbiAi0J7Qv9C40YHQsNC90LjQtSDQsNGA0YXQuNGC0LXQutGC0YPRgNGLINC/0LvQsNGC0YTQvtGA0LzRiyDQv9C+0LjRgdC60LAg0Lgg0LfQsNC60LDQt9CwINGD0YHQu9GD0LMg0LIg0YHRgtC40LvQtSBBcmNoaXRlY3R1cmUgYXMgQ29kZSIKCiAgICAhaWRlbnRpZmllcnMgaGllcmFyY2hpY2FsCgogICAgbW9kZWwgewogICAgICAgIHByb3BlcnRpZXMgewogICAgICAgICAgICBzdHJ1Y3R1cml6ci5ncm91cFNlcGFyYXRvciAiLyIKICAgICAgICB9CgogICAgICAgIHVzZXIgPSBwZXJzb24gItCf0L7Qu9GM0LfQvtCy0LDRgtC10LvRjCIKICAgICAgICBhZG1pbiA9IHBlcnNvbiAi0JDQtNC80LjQvdC40YHRgtGA0LDRgtC+0YAiCgogICAgICAgIHByb2ZpX3BsYXRmb3JtID0gc29mdHdhcmVTeXN0ZW0gIlByb2ZpLnJ1IiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQodC10YDQstC40YEg0LTQu9GPINC/0L7QuNGB0LrQsCDRgdC/0LXRhtC40LDQu9C40YHRgtC+0LIg0Lgg0LfQsNC60LDQt9CwINGD0YHQu9GD0LMiCgogICAgICAgICAgICB1c2VycGxhbmVfYmZmID0gY29udGFpbmVyICJVc2VycGxhbmUgQkZGIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAi0J/RgNC+0LzQtdC20YPRgtC+0YfQvdGL0Lkg0YHQu9C+0Lkg0LzQtdC20LTRgyDQutC70LjQtdC90YLQvtC8ICjQstC10LEv0LzQvtCx0LDQudC7KSDQuCDRgdC10YDQstC40YHQsNC80Lgg0LTQu9GPINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvQtdC5IgogICAgICAgICAgICB9CgogICAgICAgICAgICBhZG1pbl9iZmYgPSBjb250YWluZXIgIkFkbWluIEJGRiIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gItCf0YDQvtC80LXQttGD0YLQvtGH0L3Ri9C5INGB0LvQvtC5INC80LXQttC00YMg0LDQtNC80LjQvS3QuNC90YLQtdGA0YTQtdC50YHQvtC8INC4INGB0LXRgNCy0LjRgdCw0LzQuCIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgdXNlcl9zZXJ2aWNlID0gY29udGFpbmVyICJVc2VyIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQoNC10LPQuNGB0YLRgNCw0YbQuNGPLCDQv9C+0LjRgdC6INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvQtdC5IgogICAgICAgICAgICB9CgogICAgICAgICAgICBjYXRhbG9nX3NlcnZpY2UgPSBjb250YWluZXIgIkNhdGFsb2cgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gItCj0L/RgNCw0LLQu9C10L3QuNC1INGD0YHQu9GD0LPQsNC80LgiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIG9yZGVyX3NlcnZpY2UgPSBjb250YWluZXIgIk9yZGVyIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQodC+0LfQtNCw0L3QuNC1INC4INC+0LHRgNCw0LHQvtGC0LrQsCDQt9Cw0LrQsNC30L7QsiIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZ3JvdXAgItCh0LvQvtC5INC00LDQvdC90YvRhSIgewogICAgICAgICAgICAgICAgdXNlcl9kYiA9IGNvbnRhaW5lciAiVXNlciBEQiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQkdCUINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvQtdC5IgogICAgICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIlBvc3RncmVTUUwiCiAgICAgICAgICAgICAgICAgICAgdGFncyAiZGF0YWJhc2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY2F0YWxvZ19kYiA9IGNvbnRhaW5lciAiQ2F0YWxvZyBEQiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICLQkdCUINGD0YHQu9GD0LMiCiAgICAgICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiUG9zdGdyZVNRTCIKICAgICAgICAgICAgICAgICAgICB0YWdzICJkYXRhYmFzZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBvcmRlcl9kYiA9IGNvbnRhaW5lciAiT3JkZXIgREIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAi0JHQlCDQt9Cw0LrQsNC30L7QsiIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJQb3N0Z3JlU1FMIgogICAgICAgICAgICAgICAgICAgIHRhZ3MgImRhdGFiYXNlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICB1c2VyIC0+IHVzZXJwbGFuZV9iZmYgItCU0L7RgdGC0YPQvyDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8iCiAgICAgICAgICAgIGFkbWluIC0+IGFkbWluX2JmZiAi0JTQvtGB0YLRg9C/INCw0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGA0LAiCiAgICAgICAgICAgIHVzZXIgLT4gcHJvZmlfcGxhdGZvcm0gItCS0LfQsNC40LzQvtC00LXQudGB0YLQstC40LUg0YfQtdGA0LXQtyDQv9C70LDRgtGE0L7RgNC80YMiCgogICAgICAgICAgICB1c2VycGxhbmVfYmZmIC0+IHVzZXJfc2VydmljZSAi0KDQsNCx0L7RgtCwINGBINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRj9C80LgiCiAgICAgICAgICAgIGFkbWluX2JmZiAtPiB1c2VyX3NlcnZpY2UgItCg0LDQsdC+0YLQsCDRgSDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y/QvNC4IgogICAgICAgICAgICB1c2VyX3NlcnZpY2UgLT4gdXNlcl9kYiAi0KfRgtC10L3QuNC1L9C30LDQv9C40YHRjCDQtNCw0L3QvdGL0YUg0L4g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP0YUiCgogICAgICAgICAgICB1c2VycGxhbmVfYmZmIC0+IGNhdGFsb2dfc2VydmljZSAi0KDQsNCx0L7RgtCwINGBINGD0YHQu9GD0LPQsNC80LgiCiAgICAgICAgICAgIGFkbWluX2JmZiAtPiBjYXRhbG9nX3NlcnZpY2UgItCg0LDQsdC+0YLQsCDRgSDRg9GB0LvRg9Cz0LDQvNC4IgogICAgICAgICAgICBjYXRhbG9nX3NlcnZpY2UgLT4gY2F0YWxvZ19kYiAi0KfRgtC10L3QuNC1L9C30LDQv9C40YHRjCDRg9GB0LvRg9CzIgoKICAgICAgICAgICAgdXNlcnBsYW5lX2JmZiAtPiBvcmRlcl9zZXJ2aWNlICLQoNCw0LHQvtGC0LAg0YEg0LfQsNC60LDQt9Cw0LzQuCIKICAgICAgICAgICAgYWRtaW5fYmZmIC0+IG9yZGVyX3NlcnZpY2UgItCf0YDQvtGB0LzQvtGC0YAg0LfQsNC60LDQt9C+0LIg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9C10LkiCiAgICAgICAgICAgIG9yZGVyX3NlcnZpY2UgLT4gb3JkZXJfZGIgItCn0YLQtdC90LjQtS/Qt9Cw0L/QuNGB0Ywg0LfQsNC60LDQt9C+0LIiCiAgICAgICAgICAgIG9yZGVyX3NlcnZpY2UgLT4gdXNlcl9zZXJ2aWNlICLQn9GA0L7QstC10YDQutCwINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyIKICAgICAgICAgICAgb3JkZXJfc2VydmljZSAtPiBjYXRhbG9nX3NlcnZpY2UgItCf0YDQvtCy0LXRgNC60LAg0YPRgdC70YPQs9C4INC/0YDQuCDQtNC+0LHQsNCy0LvQtdC90LjQuCDQsiDQt9Cw0LrQsNC3IgogICAgICAgIH0KCiAgICAgICAgcHJvZHVjdGlvbiA9IGRlcGxveW1lbnRFbnZpcm9ubWVudCAiUHJvZHVjdGlvbiIgewogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQkZGIExheWVyIiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiVXNlcnBsYW5lIEJGRiBOb2RlIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0udXNlcnBsYW5lX2JmZgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkFkbWluIEJGRiBOb2RlIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0uYWRtaW5fYmZmCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJVc2VyIFNlcnZpY2UgTm9kZSIgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0udXNlcl9zZXJ2aWNlCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJDYXRhbG9nIFNlcnZpY2UgTm9kZSIgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0uY2F0YWxvZ19zZXJ2aWNlCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJPcmRlciBTZXJ2aWNlIE5vZGUiIHsKICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRhdGFiYXNlcyIgewogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIlVzZXIgREIgTm9kZSIgewogICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIHByb2ZpX3BsYXRmb3JtLnVzZXJfZGIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQ2F0YWxvZyBEQiBOb2RlIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0uY2F0YWxvZ19kYgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJPcmRlciBEQiBOb2RlIiB7CiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcHJvZmlfcGxhdGZvcm0ub3JkZXJfZGIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtQ29udGV4dCBwcm9maV9wbGF0Zm9ybSB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgcHJvZmlfcGxhdGZvcm0gewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgZGVwbG95bWVudCBwcm9maV9wbGF0Zm9ybSBwcm9kdWN0aW9uIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgcHJvZmlfcGxhdGZvcm0gIlVDMDEiICLQodC+0LfQtNCw0L3QuNC1INC90L7QstC+0LPQviDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8iIHsKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICB1c2VyIC0+IHByb2ZpX3BsYXRmb3JtLnVzZXJwbGFuZV9iZmYgIlBPU1QgL3VzZXJzIgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS51c2VycGxhbmVfYmZmIC0+IHByb2ZpX3BsYXRmb3JtLnVzZXJfc2VydmljZSAi0KHQvtC30LTQsNGC0Ywg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPIgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS51c2VyX3NlcnZpY2UgLT4gcHJvZmlfcGxhdGZvcm0udXNlcl9kYiAi0KHQvtGF0YDQsNC90Y/QtdGCINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgcHJvZmlfcGxhdGZvcm0gIlVDMDIiICLQn9C+0LjRgdC6INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyDQv9C+INC70L7Qs9C40L3RgyIgewogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHVzZXIgLT4gcHJvZmlfcGxhdGZvcm0udXNlcnBsYW5lX2JmZiAiR0VUIC91c2Vycy97bG9naW59IgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS51c2VycGxhbmVfYmZmIC0+IHByb2ZpX3BsYXRmb3JtLnVzZXJfc2VydmljZSAi0J/QvtC40YHQuiDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8iCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLnVzZXJfc2VydmljZSAtPiBwcm9maV9wbGF0Zm9ybS51c2VyX2RiICLQn9C+0LvRg9GH0LDQtdGCINC00LDQvdC90YvQtSIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgcHJvZmlfcGxhdGZvcm0gIlVDMDMiICLQodC+0LfQtNCw0L3QuNC1INC30LDQutCw0LfQsCIgewogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHVzZXIgLT4gcHJvZmlfcGxhdGZvcm0udXNlcnBsYW5lX2JmZiAiUE9TVCAvb3JkZXJzIgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS51c2VycGxhbmVfYmZmIC0+IHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UgItCh0L7Qt9C00LDRgtGMINC30LDQutCw0LciCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UgLT4gcHJvZmlfcGxhdGZvcm0ub3JkZXJfZGIgItCh0L7RhdGA0LDQvdGP0LXRgiDQt9Cw0LrQsNC3IgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS5vcmRlcl9zZXJ2aWNlIC0+IHByb2ZpX3BsYXRmb3JtLnVzZXJfc2VydmljZSAi0J/RgNC+0LLQtdGA0LrQsCDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8iCiAgICAgICAgfQoKICAgICAgICBkeW5hbWljIHByb2ZpX3BsYXRmb3JtICJVQzA0IiAi0JTQvtCx0LDQstC70LXQvdC40LUg0YPRgdC70YPQs9C4INCyINC30LDQutCw0LciIHsKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICB1c2VyIC0+IHByb2ZpX3BsYXRmb3JtLnVzZXJwbGFuZV9iZmYgIlBPU1QgL29yZGVycy97aWR9L3NlcnZpY2VzIgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS51c2VycGxhbmVfYmZmIC0+IHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UgItCU0L7QsdCw0LLQuNGC0Ywg0YPRgdC70YPQs9GDINCyINC30LDQutCw0LciCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UgLT4gcHJvZmlfcGxhdGZvcm0uY2F0YWxvZ19zZXJ2aWNlICLQn9GA0L7QstC10YDQutCwINGD0YHQu9GD0LPQuCIKICAgICAgICAgICAgcHJvZmlfcGxhdGZvcm0uY2F0YWxvZ19zZXJ2aWNlIC0+IHByb2ZpX3BsYXRmb3JtLmNhdGFsb2dfZGIgItCf0L7Qu9GD0YfQtdC90LjQtSDRg9GB0LvRg9Cz0LgiCiAgICAgICAgfQoKICAgICAgICBkeW5hbWljIHByb2ZpX3BsYXRmb3JtICJVQzA1IiAi0J/RgNC+0YHQvNC+0YLRgCDQt9Cw0LrQsNC30L7QsiDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8gKNCw0LTQvNC40L0pIiB7CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgYWRtaW4gLT4gcHJvZmlfcGxhdGZvcm0uYWRtaW5fYmZmICJHRVQgL29yZGVycz91c2VyPXtpZH0iCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLmFkbWluX2JmZiAtPiBwcm9maV9wbGF0Zm9ybS5vcmRlcl9zZXJ2aWNlICLQn9C+0LvRg9GH0LjRgtGMINGB0L/QuNGB0L7QuiDQt9Cw0LrQsNC30L7QsiDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8iCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLm9yZGVyX3NlcnZpY2UgLT4gcHJvZmlfcGxhdGZvcm0ub3JkZXJfZGIgItCn0YLQtdC90LjQtSDQt9Cw0LrQsNC30L7QsiDQv9C+INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjiIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgcHJvZmlfcGxhdGZvcm0gIlVDMDYiICLQoNC10LTQsNC60YLQuNGA0L7QstCw0L3QuNC1INGD0YHQu9GD0LPQuCAo0LDQtNC80LjQvSkiIHsKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICBhZG1pbiAtPiBwcm9maV9wbGF0Zm9ybS5hZG1pbl9iZmYgIlBVVCAvc2VydmljZXMve2lkfSIKICAgICAgICAgICAgcHJvZmlfcGxhdGZvcm0uYWRtaW5fYmZmIC0+IHByb2ZpX3BsYXRmb3JtLmNhdGFsb2dfc2VydmljZSAi0J7QsdC90L7QstC40YLRjCDRg9GB0LvRg9Cz0YMiCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLmNhdGFsb2dfc2VydmljZSAtPiBwcm9maV9wbGF0Zm9ybS5jYXRhbG9nX2RiICLQmNC30LzQtdC90LXQvdC40LUg0LTQsNC90L3Ri9GFINGD0YHQu9GD0LPQuCIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgcHJvZmlfcGxhdGZvcm0gIlVDMDciICLQn9C+0LjRgdC6INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyDQv9C+INC40LzQtdC90LggKNCw0LTQvNC40L0pIiB7CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgYWRtaW4gLT4gcHJvZmlfcGxhdGZvcm0uYWRtaW5fYmZmICJHRVQgL3VzZXJzP25hbWU9Li4uIgogICAgICAgICAgICBwcm9maV9wbGF0Zm9ybS5hZG1pbl9iZmYgLT4gcHJvZmlfcGxhdGZvcm0udXNlcl9zZXJ2aWNlICLQn9C+0LjRgdC6INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyDQv9C+INC40LzQtdC90LgiCiAgICAgICAgICAgIHByb2ZpX3BsYXRmb3JtLnVzZXJfc2VydmljZSAtPiBwcm9maV9wbGF0Zm9ybS51c2VyX2RiICLQpNC40LvRjNGC0YDQsNGG0LjRjyDQv9C+0LvRjNC30L7QstCw0YLQtdC70LXQuSDQv9C+INC40LzQtdC90LgiCiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgImRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBwcm9wZXJ0aWVzIHsKICAgICAgICAgICAgc3RydWN0dXJpenIudG9vbHRpcHMgdHJ1ZQogICAgICAgIH0KICAgIH0KfQ=="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "UC01",
+      "metadataSymbols" : "SquareBrackets",
+      "properties" : {
+        "structurizr.tooltips" : "true"
+      },
+      "styles" : {
+        "elements" : [ {
+          "shape" : "Cylinder",
+          "tag" : "database"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 3265,
+        "width" : 2430
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 615,
+        "y" : 165
+      }, {
+        "id" : "2",
+        "x" : 1365,
+        "y" : 165
+      }, {
+        "id" : "4",
+        "x" : 615,
+        "y" : 765
+      }, {
+        "id" : "5",
+        "x" : 1365,
+        "y" : 765
+      }, {
+        "id" : "6",
+        "x" : 352,
+        "y" : 1965
+      }, {
+        "id" : "7",
+        "x" : 1627,
+        "y" : 1965
+      }, {
+        "id" : "8",
+        "x" : 990,
+        "y" : 1365
+      }, {
+        "id" : "9",
+        "x" : 240,
+        "y" : 2565
+      }, {
+        "id" : "10",
+        "x" : 1740,
+        "y" : 2565
+      }, {
+        "id" : "11",
+        "x" : 990,
+        "y" : 2565
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "12"
+      }, {
+        "id" : "14"
+      }, {
+        "id" : "17",
+        "vertices" : [ {
+          "x" : 607,
+          "y" : 1365
+        } ]
+      }, {
+        "id" : "18",
+        "vertices" : [ {
+          "x" : 840,
+          "y" : 1365
+        } ]
+      }, {
+        "id" : "19"
+      }, {
+        "id" : "20",
+        "vertices" : [ {
+          "x" : 1590,
+          "y" : 1365
+        } ]
+      }, {
+        "id" : "21",
+        "vertices" : [ {
+          "x" : 1823,
+          "y" : 1365
+        } ]
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "27"
+      } ],
+      "softwareSystemId" : "3"
+    } ],
+    "deploymentViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "elements" : [ {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "37",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "38",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "41",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "42",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "47",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "49",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "51",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "52",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "environment" : "Production",
+      "generatedKey" : true,
+      "key" : "Deployment-001",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "35"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "39"
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "56"
+      } ],
+      "softwareSystemId" : "3"
+    } ],
+    "dynamicViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Создание нового пользователя",
+      "dimensions" : {
+        "height" : 2665,
+        "width" : 930
+      },
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 240,
+        "y" : 151
+      }, {
+        "id" : "4",
+        "x" : 240,
+        "y" : 751
+      }, {
+        "id" : "6",
+        "x" : 240,
+        "y" : 1351
+      }, {
+        "id" : "9",
+        "x" : 240,
+        "y" : 1951
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC01",
+      "order" : 4,
+      "relationships" : [ {
+        "description" : "POST /users",
+        "id" : "12",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Создать пользователя",
+        "id" : "17",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Сохраняет пользователя",
+        "id" : "19",
+        "order" : "3",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Поиск пользователя по логину",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC02",
+      "order" : 5,
+      "relationships" : [ {
+        "description" : "GET /users/{login}",
+        "id" : "12",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Поиск пользователя",
+        "id" : "17",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Получает данные",
+        "id" : "19",
+        "order" : "3",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Создание заказа",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC03",
+      "order" : 6,
+      "relationships" : [ {
+        "description" : "POST /orders",
+        "id" : "12",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Создать заказ",
+        "id" : "23",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Сохраняет заказ",
+        "id" : "25",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Проверка пользователя",
+        "id" : "26",
+        "order" : "4",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Добавление услуги в заказ",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC04",
+      "order" : 7,
+      "relationships" : [ {
+        "description" : "POST /orders/{id}/services",
+        "id" : "12",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Добавить услугу в заказ",
+        "id" : "23",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Проверка услуги",
+        "id" : "27",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Получение услуги",
+        "id" : "22",
+        "order" : "4",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Просмотр заказов пользователя (админ)",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC05",
+      "order" : 8,
+      "relationships" : [ {
+        "description" : "GET /orders?user={id}",
+        "id" : "14",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Получить список заказов пользователя",
+        "id" : "24",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Чтение заказов по пользователю",
+        "id" : "25",
+        "order" : "3",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Редактирование услуги (админ)",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC06",
+      "order" : 9,
+      "relationships" : [ {
+        "description" : "PUT /services/{id}",
+        "id" : "14",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Обновить услугу",
+        "id" : "21",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Изменение данных услуги",
+        "id" : "22",
+        "order" : "3",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Поиск пользователя по имени (админ)",
+      "elementId" : "3",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "UC07",
+      "order" : 10,
+      "relationships" : [ {
+        "description" : "GET /users?name=...",
+        "id" : "14",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Поиск пользователя по имени",
+        "id" : "18",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Фильтрация пользователей по имени",
+        "id" : "19",
+        "order" : "3",
+        "response" : false
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1300,
+        "width" : 1550
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 165
+      }, {
+        "id" : "2",
+        "x" : 949,
+        "y" : 165
+      }, {
+        "id" : "3",
+        "x" : 199,
+        "y" : 765
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "13",
+        "vertices" : [ {
+          "x" : 261,
+          "y" : 646
+        } ]
+      }, {
+        "id" : "15"
+      }, {
+        "id" : "16",
+        "vertices" : [ {
+          "x" : 561,
+          "y" : 633
+        } ]
+      } ],
+      "softwareSystemId" : "3"
+    } ]
+  }
+}
