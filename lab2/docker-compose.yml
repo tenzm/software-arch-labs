@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  user-service:
+    build: ./user-service
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./user-service:/app
+    networks:
+      - profi-network
+
+  catalog-service:
+    build: ./catalog-service
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./catalog-service:/app
+    networks:
+      - profi-network
+
+networks:
+  profi-network:
+    driver: bridge 
