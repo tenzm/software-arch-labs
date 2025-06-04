@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: profi_postgres
+    environment:
+      POSTGRES_DB: profi_db
+      POSTGRES_USER: profi_user
+      POSTGRES_PASSWORD: profi_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - profi-network
+    restart: unless-stopped
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "8080:8000"
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://profi_user:profi_pass@postgres:5432/profi_db
+    volumes:
+      - ./user-service:/app
+    networks:
+      - profi-network
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  catalog-service:
+    build: ./catalog-service
+    ports:
+      - "8081:8001"
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://profi_user:profi_pass@postgres:5432/profi_db
+    volumes:
+      - ./catalog-service:/app
+    networks:
+      - profi-network
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  profi-network:
+    driver: bridge 
