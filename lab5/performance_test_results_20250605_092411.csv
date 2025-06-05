@@ -1,0 +1,7 @@
+cache_enabled,data_read,latency_99th,latency_avg,latency_max,latency_stdev,requests_per_sec,test_duration,test_type,threads,timestamp,total_requests,transfer_per_sec,url
+True,653.65MB read,8.03ms,5.95ms,178.79ms,7.41ms,1826.31,30.04s,users_list_with_cache,1,2025-06-05T09:21:20.385715,54854,21.76MB,http://localhost:8080/api/v1/performance/users?limit=50&offset=0
+False,343.98MB read,30.43ms,10.72ms,115.31ms,4.98ms,961.13,30.03s,users_list_no_cache,1,2025-06-05T09:21:52.444012,28867,11.45MB,http://localhost:8080/api/v1/performance/users-no-cache?limit=50&offset=0
+True,638.13MB read,49.09ms,28.17ms,197.50ms,7.91ms,1780.39,30.08s,users_list_with_cache,5,2025-06-05T09:22:27.542626,53552,21.22MB,http://localhost:8080/api/v1/performance/users?limit=50&offset=0
+False,330.79MB read,91.22ms,54.32ms,266.53ms,11.43ms,924.08,30.04s,users_list_no_cache,5,2025-06-05T09:22:59.610764,27760,11.01MB,http://localhost:8080/api/v1/performance/users-no-cache?limit=50&offset=0
+True,618.31MB read,91.80ms,58.69ms,594.14ms,21.36ms,1723.56,30.11s,users_list_with_cache,10,2025-06-05T09:23:34.730961,51888,20.54MB,http://localhost:8080/api/v1/performance/users?limit=50&offset=0
+False,318.91MB read,198.47ms,112.48ms,403.46ms,20.39ms,889.48,30.09s,users_list_no_cache,10,2025-06-05T09:24:06.845965,26763,10.60MB,http://localhost:8080/api/v1/performance/users-no-cache?limit=50&offset=0
